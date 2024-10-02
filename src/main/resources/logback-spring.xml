@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %5p | %t | %-55logger{55} | %m %n</pattern>
+		</encoder>
+	</appender>
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/Suppliers_service.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d %5p | %t | %-55logger{55} | %m %n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_PATH}/Suppliers_service_%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+			<MaxHistory>30</MaxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>

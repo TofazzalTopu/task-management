@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body style="background-color:black;text-align:center;font-family: arial;letter-spacing: 1px; line-height: 32px;color:black;margin:0px;">
+<table style="width:100%;background-color:#4ca4ef;">
+    <tr>
+        <td style="padding-bottom: 130px;padding-top: 40px;">
+            <img th:src="${logo}" style="width:177px;"/>
+        </td>
+    </tr>
+</table>
+<table style="width:90%;background-color: white;margin: -105px auto 0px auto;border-radius: 45px;padding-bottom: 36px;">
+    <tr>
+        <td style="padding-top:34px;">
+            <img th:src="${photo}"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top: 30px;padding-bottom: 30px;font-size: 26px;font-weight: 700;color:#00a1ff;">
+            Send Invitation
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <hr style="width:70%;"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top: 20px;font-size: 20px;">
+            Estimado <span style="color:#00a1ff" th:text="${providerName}">  </span>,
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top:10px;font-size: 20px;padding-left: 7%;padding-right: 7%;">
+            Bienvenido al Portal del Proveedor de Basico RE!
+        </td>
+    </tr>
+    <tr>
+        <td style="color: #7a7a7a;padding-top: 45px;font-size: 20px;padding-left: 7%;padding-right: 7%;padding-bottom: 40px;">
+            Estamos encantados y muy ilusionados de poder verte por aquí. Hemos creado este espacio porque queremos crear
+            un entorno que nos permita trabajar de manera mas eficiente y tener una mejor comunicación contigo.
+            Te invitamos a registrarte y a empezar a utilizar el Portal de Proveedor de Basico RE cuanto antes!
+            Para ello accede a través de este enlace por favor.
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding-top:15px;">
+            <a th:href="${url}"
+               style="background-color: #3ba2e9;color: white;padding: 14px 49px;border-radius: 12px;font-size: 18px;text-decoration: none;">
+                Access</a>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top:50px;font-size: 20px;">
+            Muchas Gracias
+        </td>
+    </tr>
+    <tr>
+        <td style="padding-top:30px;font-size: 20px;">
+            Te esperamos pranto!<br/>
+            El equipo de Basico RE
+        </td>
+    </tr>
+</table>
+</body>
+</html>
